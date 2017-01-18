@@ -2,7 +2,7 @@
 
 > face.apply(palm)
 
-A collection of strange code fragments
+A collection of strange code fragments I stumbled upon in reviews
 
 
 ## Are you yourself?
