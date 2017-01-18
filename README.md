@@ -41,7 +41,7 @@ final StringBuilder bob = new StringBuilder( "[" );
 
 ## Going the extra mile.. the wrong way
 
-Violating the DRY-approach and repeating this method in many other classes wasn't a good idea as well.
+Placing duplicates of this method in many other classes wasn't a good idea as well.
 
 ```java
 private String buildStringParamValueFromRequest() {
