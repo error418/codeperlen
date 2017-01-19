@@ -80,3 +80,33 @@ private String buildStringParamValueFromRequest() {
 }
 
 ```
+
+
+## Trying to be fancy
+
+Regular expressions are tremendously cool, *but* be sure to use them the right way.
+
+...And write `fsck`ing Unit tests for your methods!
+
+```java
+public boolean isValid(String birthYear, ConstraintValidatorContext context) {
+
+	if (value != null && value.matches("\\d{4}")) {
+
+		int birthYear = Integer.valueOf(birthYear);
+		int currentYear = Calendar.getInstance().get(Calendar.YEAR);
+		int before100Years = currentYear - 100;
+
+		if (birthYear > currentYear || birthYear < before100Years) {
+			return false;
+		}
+	}
+
+	return true;
+}
+```
+
+
+Valid years (according to this method) would be:
+
+`KITTY`, `10000`, `500`, `-2000`, `1000 a.d.`
