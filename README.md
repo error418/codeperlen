@@ -4,6 +4,7 @@
 
 A collection of strange code fragments I stumbled upon in reviews
 
+Have fun :)
 
 ## Are you yourself?
 
