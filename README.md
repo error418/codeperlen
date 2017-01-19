@@ -108,6 +108,6 @@ public boolean isValid(String birthYear, ConstraintValidatorContext context) {
 ```
 
 
-Valid years (according to this method) would be:
+Valid years (according to this method) are:
 
 `KITTY`, `10000`, `500`, `-2000`, `1000 a.d.`
