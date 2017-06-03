@@ -23,7 +23,7 @@ The final modifier should have been extra-suspicious to the developer. Not to me
 
 ```java
 public static String getMessageTypesAsJsonArray() {
-final StringBuilder bob = new StringBuilder( "[" );
+	final StringBuilder bob = new StringBuilder( "[" );
 	final boolean first = true;
 	for ( final MessageType type : MessageType.allValues() ) {
 		if ( !first ) {
@@ -46,24 +46,24 @@ Placing duplicates of this method in many other classes wasn't a good idea as we
 
 ```java
 private String buildStringParamValueFromRequest() {
-		Map<String, String> paramMap = ((ExternalContext) new Object()).getRequestParameterMap();
+	Map<String, String> paramMap = ((ExternalContext) new Object()).getRequestParameterMap();
 
 	if (!paramMap.isEmpty()) {
 		StringBuilder sb = new StringBuilder("?");
 
-        for (Entry<String, String> entry : paramMap.entrySet()) {
-            sb.append(entry.getKey());
-            sb.append("=");
-            sb.append(entry.getValue());
-            sb.append("&");
-        }
+		for (Entry<String, String> entry : paramMap.entrySet()) {
+			sb.append(entry.getKey());
+			sb.append("=");
+			sb.append(entry.getValue());
+			sb.append("&");
+		}
 
 		sb.setLength(sb.length() - 1);
 
 		return sb.toString();
 	}
 	
-    return "";
+	return "";
 }
 ```
 
@@ -93,7 +93,6 @@ Regular expressions are tremendously cool, *but* be sure to use them the right w
 public boolean isValid(String birthYear, ConstraintValidatorContext context) {
 
 	if (value != null && value.matches("\\d{4}")) {
-
 		int birthYear = Integer.valueOf(birthYear);
 		int currentYear = Calendar.getInstance().get(Calendar.YEAR);
 		int before100Years = currentYear - 100;
