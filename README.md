@@ -110,3 +110,16 @@ public boolean isValid(String birthYear, ConstraintValidatorContext context) {
 Valid years (according to this method) are:
 
 `KITTY`, `10000`, `500`, `-2000`, `1000 a.d.`
+
+## Fixing Sonar
+
+For some developers Sonar seems to be just an obstructive step of a build pipeline instead of a tool designed to leverage your code quality.
+
+```java
+/**
+ * Constructor to fix Sonar issue
+ */
+public ServiceImpl() {
+	// Sonar needs a comment here
+}
+```
